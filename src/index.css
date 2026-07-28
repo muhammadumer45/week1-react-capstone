@@ -1,0 +1,111 @@
+:root {
+  /* Warm olive + amber — no white / blue / purple */
+  --bg: #c8ceba;
+  --bg-deep: #b4bca4;
+  --surface: #d9decc;
+  --surface-strong: #c5ccb4;
+  --surface-done: #cfd8c0;
+  --border: #9aa486;
+  --border-done: #7f9468;
+  --text: #1e2618;
+  --ink: #1a1f14;
+  --muted: #4f5a42;
+  --accent: #e0a100;
+  --accent-deep: #8a5a00;
+  --success: #3d6b3a;
+  --danger: #9f2d1f;
+  --danger-soft: #e8c4bc;
+
+  font-family: 'Trebuchet MS', 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(224, 161, 0, 0.22), transparent 42%),
+    radial-gradient(circle at bottom right, rgba(61, 107, 58, 0.18), transparent 45%),
+    linear-gradient(165deg, var(--bg-deep), var(--bg) 55%, #d2d7c4);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+input {
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+input::placeholder {
+  color: #6a755c;
+}
+
+input:focus {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 1px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 0.95rem;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+button:hover {
+  filter: brightness(1.06);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 2px;
+}
+
+.btn-ghost {
+  background: var(--surface-strong);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #f3ebe6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
